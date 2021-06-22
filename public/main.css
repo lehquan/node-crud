@@ -1,0 +1,289 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif !important;
+	overflow: hidden;
+	background: #F9F9F9;
+}
+
+#tab {
+	width: 700px;
+	height: 6%;
+	margin: 0 auto;
+	transform: translate(-50%, 50%);
+	left: 50%;
+	top: 0;
+	position: absolute;
+	background: rgba(0,0,0,1);
+	border: none;
+	-webkit-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	-moz-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+}
+#tab #login-tab {
+	width: 348px;
+	height: 100%;
+	/*background: green;*/
+	position: relative;
+	float: left;
+	border-right: 2px solid #F9F9F9;
+}
+#tab #signup-tab {
+	width: 50%;
+	height: 100%;
+	/*background: pink;*/
+	position: relative;
+	float: right;
+}
+#tab button {
+	transform: translate(-50%, 5%);
+	left: 43%;
+	position: relative;
+	color: #F9F9F9;
+	font-weight: 400;
+	background: black;
+	padding: 5%;
+	width: 300px;
+	border: none;
+	font-size: 16px;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	text-align: left;
+	cursor: pointer;
+}
+
+#form-wrapper-login, #form-wrapper-signup {
+	width: 700px;
+	height: 900px;
+	margin: 0 auto;
+	top: 0;
+	position: absolute;
+	transform: translate(-50%, 10%);
+	left: 50%;
+	background: #F9F9F9;
+	border: none;
+	-webkit-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	-moz-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+}
+
+#form-wrapper-login .header, #form-wrapper-signup .header {
+	width: 100%;
+	height: 15%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#form-wrapper-login .header img, #form-wrapper-signup .header img {
+	position: relative;
+	transform: translate(-50%, -50%);
+	left: 12%;
+	top: 40%;
+	cursor: pointer;
+}
+
+#form-wrapper-login .title, #form-wrapper-signup .title {
+	width: 90%;
+	height: 15%;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-top: 5%;
+	margin-left: 10%;
+}
+#form-wrapper-login .title h1, #form-wrapper-signup .title h1 {
+	/*color: rgba(35,66,46, 0.5);*/
+	color: rgba(0,0,0, 0.5);
+	font-weight: normal;
+	font-size: 50px;
+	margin-bottom: 0;
+}
+#form-wrapper-login .title h1 strong, #form-wrapper-signup .title h1 strong {
+	color: rgba(0,0,0,1) !important;
+	font-weight: normal;
+	font-size: 50px;
+	margin-bottom: 0;
+}
+#form-wrapper-login .title p {
+	color: rgba(0,0,0, 0.5);
+	margin-top: 0;
+	width: 240px;
+	line-height: 1.5;
+	font-size: 20px;
+}
+#form-wrapper-signup .title p {
+	color: rgba(0,0,0, 0.5);
+	margin-top: 0;
+	width: 300px;
+	line-height: 1.5;
+	font-size: 20px;
+}
+
+#form-wrapper-login .form-control, #form-wrapper-signup .form-control {
+	width: 80%;
+	height: 40%;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-top: 5%;
+	margin-left: 10%;
+}
+#form-wrapper-login .form-control form, #form-wrapper-signup .form-control form {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#form-wrapper-login .form-control #emailLogin,
+#form-wrapper-login .form-control #passwordLogin,
+#form-wrapper-signup .form-control #usernameSignup,
+#form-wrapper-signup .form-control #emailSignup,
+#form-wrapper-signup .form-control #passwordSignup {
+	width: 88%;
+	padding: 6%;
+	position: relative;
+	border: 1px solid #DADADA;
+	font-size: 16px;
+}
+#form-wrapper-login .form-control form input::placeholder, #form-wrapper-signup .form-control form input::placeholder {
+	color: rgba(0,0,0, 0.3);
+	opacity: 1;
+}
+
+#form-wrapper-login .form-control form .checkmark, #form-wrapper-signup .form-control form .checkmark {
+	transform: translate(-50%, 50%);
+	left: 13px;
+	top: 55%;
+	background: transparent;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	border: 1px solid #DADADA;
+	float: left;
+	cursor: pointer;
+}
+#form-wrapper-login .form-control form:hover input ~ .checkmark, #form-wrapper-signup .form-control form:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+#form-wrapper-login .form-control form input:checked ~ .checkmark, #form-wrapper-signup .form-control form input:checked ~ .checkmark {
+	background-color: black;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+#form-wrapper-login .form-control form input:checked ~ .checkmark:after, #form-wrapper-signup .form-control form input:checked ~ .checkmark:after {
+	display: block;
+}
+#form-wrapper-login .form-control form .checkmark:after, #form-wrapper-signup .form-control form .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+#form-wrapper-login .form-control form p, #form-wrapper-signup .form-control form p {
+	color: rgba(0,0,0, 0.5);
+	position: relative;
+	transform: translate(-50%, 50%);
+	left: 16%;
+	top: 4%;
+	float: left;
+}
+#form-wrapper-login .form-control form .forget-pwd {
+	color: black;
+	position: relative;
+	transform: translate(-50%, 50%);
+	top: 4%;
+	float: right;
+	margin-right: 7%;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#form-wrapper-login .form-control .btn-login {
+	position: relative;
+	background: black;
+	width: 200px;
+	height: 50px;
+	color: #DADADA;
+	font-weight: 400;
+	transform: translate(-15%, 50%);
+	left: 20%;
+	top: 30%;
+	float: left;
+	font-size: 18px;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+#form-wrapper-signup .form-control .btn-signup {
+	position: relative;
+	width: 155px;
+	height: 50px;
+	color: #DADADA;
+	background: black;
+	font-weight: 400;
+	transform: translate(-50%, 50%);
+	left: 14%;
+	top: 7%;
+	float: left;
+	font-size: 18px;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	border: none;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+#form-wrapper-signup .form-control form .already-member {
+	color: black;
+	position: relative;
+	transform: translate(-50%, 50%);
+	top: 11%;
+	float: right;
+	margin-right: 50%;
+	font-weight: 500;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#form-wrapper-signup .footer {
+	width: 100%;
+	height: 25%;
+	position: relative;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 8%;
+	margin: 0 auto;
+	padding: 0;
+}
+#form-wrapper-signup .footer p {
+	width: 40%;
+	height: 30%;
+	position: relative;
+	color: rgba(0,0,0, 0.5);
+	line-height: 1.6;
+	transform: translate(50%, -50%);
+	left: -10%;
+	top: 33%;
+	font-size: 18px;
+}
+#form-wrapper-signup .footer p strong {
+	color: rgba(0,0,0, 1) !important;
+	font-weight: normal !important;
+}

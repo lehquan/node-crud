@@ -1,0 +1,84 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif !important;
+	overflow: hidden;
+	background: #F9F9F9;
+}
+
+#popup-wrapper {
+	width: 60%;
+	height: 700px;
+	margin: 0 auto;
+	transform: translate(-50%, 25%);
+	left: 50%;
+	position: absolute;
+	/*background: #F9F9F9;*/
+	background: white;
+	border: none;
+	border-radius: 7px;
+	-webkit-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	-moz-box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+	box-shadow: 10px 69px 116px 0px rgba(185,185,189,1);
+}
+
+#popup-wrapper #pic {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#popup-wrapper #pic img {
+	transform: translate(-50%, 25%);
+	left: 50%;
+	position: absolute;
+	width: 70%;
+	border: none;
+	clip-path: ellipse(50% 40% at 50% 50%);
+}
+
+#popup-wrapper #success-message {
+	position: relative;
+	float: right;
+	/*background: pink;*/
+	width: 50%;
+	height: 100%;
+}
+#popup-wrapper #success-message h2{
+	/*color: #5E7089;*/
+	color: black;
+	position: relative;
+	transform: translate(0%, 25%);
+	top: 25%;
+	font-size: 30px;
+}
+#popup-wrapper #success-message p {
+	/*color: #909CAC;*/
+	color: rgba(0,0,0,0.5);
+	font-weight: 300;
+	width: 400px;
+	line-height: 1.6;
+	font-size: 20px;
+	letter-spacing: 0.8px;
+	position: relative;
+	transform: translate(0%, 25%);
+	top: 22%;
+}
+
+#popup-wrapper #success-message button {
+	position: absolute;
+	background:  #F56175;
+	width: 200px;
+	height: 50px;
+	color: #DADADA;
+	font-weight: 400;
+	transform: translate(0%, 50%);
+	top: 53%;
+	font-size: 18px;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 69px -39px rgba(0,0,0,0.75);
+	cursor: pointer;
+}

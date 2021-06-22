@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login & Sign Up</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+<!--	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,500,600,700&display=swap" rel="stylesheet">-->
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="tab">
+		<div id="login-tab">
+			<button id="login-tab-btn">LOGIN</button>
+		</div>
+		<div id="signup-tab">
+			<button id="signup-tab-btn">SIGN UP</button>
+		</div>
+	</div>
+	
+	<!--Login form-->
+	<div id="form-wrapper-login" style="display: block">
+		<div class="header">
+			<img src="img/openstack-100.png" alt="Aroma" width="35">
+		</div>
+		
+		<div class="title">
+			<h1>We are <strong>aroma</strong></h1>
+			<p>Welcome Back, Please login to your account.</p>
+		</div>
+		
+		<div class="form-control">
+			
+			<form action="/" method="POST">
+				<input id="emailLogin" name="emailLogin" value="" required placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+				<input id="passwordLogin" name="passwordLogin" value="" type="password" required placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+				
+				<label class="container">
+					<input type="checkbox" checked="checked">
+					<span class="checkmark"></span>
+				</label>
+				<p>Remember me</p>
+				
+				<p class="forget-pwd">Forgot password</p>
+				
+				<button class="btn-login">Login</button>
+			</form>
+			
+		</div>
+	</div>
+	
+	<!--Sign up form-->
+	<div id="form-wrapper-signup" style="display: none">
+		<div class="header">
+			<img src="img/openstack-100.png" alt="Aroma" width="35">
+		</div>
+		
+		<div class="title">
+			<h1>We are <strong>aroma</strong></h1>
+			<p>Create an account to access the full version with all features.</p>
+		</div>
+		
+		<div class="form-control">
+			
+			<form action="/register" method="POST">
+				<input id="usernameSignup" name="usernameSignup" value="" required placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+				<input id="emailSignup" name="emailSignup" value="" required placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+				<input id="passwordSignup" name="passwordSignup" value="" type="password" required placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+				
+				<p class="already-member">I'm already member</p>
+				
+				<button class="btn-signup">Sign up</button>
+			</form>
+		
+		</div>
+		
+		<div class="footer">
+			<p>By signing up, you agree to Aroma's <strong>Terms and Conditions</strong> & <strong>Privacy</strong></p>
+		</div>
+	</div>
+	
+	<script>
+		let tabLoginBtn = document.getElementById('login-tab-btn');
+		let formLogin = document.getElementById('form-wrapper-login');
+		
+		let tabSignUpBtn = document.getElementById('signup-tab-btn');
+		let formSignUp = document.getElementById('form-wrapper-signup');
+		
+		tabLoginBtn.addEventListener('click', function () {
+			console.log('Login!');
+			formLogin.style.display = 'block';
+			formSignUp.style.display = 'none';
+		});
+		
+		tabSignUpBtn.addEventListener('click', function () {
+			console.log('Sign Up!');
+			formLogin.style.display = 'none';
+			formSignUp.style.display = 'block';
+		});
+		
+	</script>
+</body>
+</html>
